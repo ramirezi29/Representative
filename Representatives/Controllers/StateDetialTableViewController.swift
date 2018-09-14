@@ -62,6 +62,7 @@ class StateDetialTableViewController: UITableViewController {
         let rep = RepresentativeController.shared.representatives[indexPath.row]
         // Configure the cell...
         cell.textLabel?.text = rep.name
+        
         cell.detailTextLabel?.text = rep.district
         return cell
     }

@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-957" y="202"/>
         </scene>
-        <!--State Detial Table View Controller-->
+        <!--Representatives Names and District s-->
         <scene sceneID="2bO-c6-W2S">
             <objects>
                 <tableViewController id="2xl-zu-cvF" customClass="StateDetialTableViewController" customModule="Representatives" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,13 +111,15 @@
                             <outlet property="delegate" destination="2xl-zu-cvF" id="PlW-bc-Hg5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XKr-jb-yxh"/>
+                    <navigationItem key="navigationItem" title="Representatives Names and District s" id="XKr-jb-yxh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="3QD-2F-XAi"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnr-fy-UUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-657" y="984"/>
         </scene>
-        <!--Second Detail View Controller-->
+        <!--Represenatives Information-->
         <scene sceneID="qLh-y5-G5V">
             <objects>
                 <viewController id="kZG-hi-SIP" customClass="SecondDetailViewController" customModule="Representatives" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-Bb-unq">
-                                <rect key="frame" x="146.5" y="232" width="82.5" height="203.5"/>
+                                <rect key="frame" x="146.5" y="312" width="82.5" height="203.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYd-m4-O2F">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
@@ -172,18 +174,22 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGi-ZS-aAS">
-                                <rect key="frame" x="54" y="85" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jGi-ZS-aAS">
+                                <rect key="frame" x="40" y="84" width="295" height="165"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pcz-Bb-unq" firstAttribute="centerY" secondItem="NtZ-PT-9Th" secondAttribute="centerY" id="jbd-ku-AYS"/>
+                            <constraint firstItem="jGi-ZS-aAS" firstAttribute="leading" secondItem="yns-nf-XYU" secondAttribute="leading" constant="40" id="FtX-Q2-PQc"/>
+                            <constraint firstItem="Pcz-Bb-unq" firstAttribute="top" secondItem="jGi-ZS-aAS" secondAttribute="bottom" constant="63" id="UGd-jH-OzI"/>
+                            <constraint firstItem="jGi-ZS-aAS" firstAttribute="top" secondItem="yns-nf-XYU" secondAttribute="top" constant="20" id="brO-n1-QS2"/>
+                            <constraint firstItem="yns-nf-XYU" firstAttribute="trailing" secondItem="jGi-ZS-aAS" secondAttribute="trailing" constant="40" id="eet-aF-iZc"/>
+                            <constraint firstItem="Pcz-Bb-unq" firstAttribute="centerY" secondItem="NtZ-PT-9Th" secondAttribute="centerY" constant="80" id="jbd-ku-AYS"/>
                             <constraint firstItem="Pcz-Bb-unq" firstAttribute="centerX" secondItem="NtZ-PT-9Th" secondAttribute="centerX" id="u1c-QG-hSx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yns-nf-XYU"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Represenatives Information" id="5kG-18-QmP"/>
                     <connections>
                         <outlet property="addressLabel" destination="M5p-lY-c8D" id="MuE-WQ-YRI"/>
                         <outlet property="districLabel" destination="Pa9-t2-7Mj" id="VD8-V1-WuV"/>

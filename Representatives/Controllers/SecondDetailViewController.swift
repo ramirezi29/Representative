@@ -32,13 +32,14 @@ class SecondDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     func updateViews(){
-        
         guard let representative = representative else { return }
-        partyLabel.text = representative.party
-        nameLabel.text = representative.name
-        initialLabel.text = state
-        districLabel.text = representative.district
-        phoneLabel.text = representative.phone
+        partyLabel.text = ("Political Party: \(representative.party)")
+        nameLabel.text = ("Name: \(representative.name)")
+        //United States is the defaul value for the optional 'state' value
+        addressLabel.text = ("\(representative.office)")
+        initialLabel.text = ("State: \(state ?? "United States of American")")
+        districLabel.text = ("District: \(representative.district)")
+        phoneLabel.text = ("Contact Info: \(representative.phone)")
         linkLabel.text = representative.link
         
     }
